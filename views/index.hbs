@@ -1,0 +1,29 @@
+<div class="container">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">№</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Group</th>
+        <th scope="col">Course</th>
+        <th scope="col">Phone number</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each students}}
+        <tr>
+          <th scope="row">1</th>
+          <td>{{firstName}}</td>
+          <td>{{lastName}}</td>
+          <td>{{Group}}</td>
+          <td>{{Course}}</td>
+          <td>{{phoneNumber}}</td>
+          <form action="/update/{{_id}}" method="POST"><td>{{Score}}<button>+</button></td></form>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <a href="/add/student">Add student</a>
+</div>
